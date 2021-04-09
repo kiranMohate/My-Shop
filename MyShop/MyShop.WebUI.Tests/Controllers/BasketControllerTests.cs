@@ -26,7 +26,7 @@ namespace MyShop.WebUI.Tests.Controllers
             IBasketService basketService = new BasketService(products, baskets);
             var controller = new BasketController(basketService);
             controller.ControllerContext = new System.Web.Mvc.ControllerContext(httpContext, new System.Web.Routing.RouteData(), controller);
-           //act
+            //act
             // basketService.AddToBasket(httpContext, "1");
 
             controller.AddToBasket("1");
@@ -47,7 +47,7 @@ namespace MyShop.WebUI.Tests.Controllers
             products.Insert(new Product() { Id = "1", Price = 10.00m });
             products.Insert(new Product() { Id = "2", Price = 67.00m });
             Basket basket = new Basket();
-            basket.BasketItems.Add(new BasketItem() { ProductId = "1", Quantity = 2});
+            basket.BasketItems.Add(new BasketItem() { ProductId = "1", Quantity = 2 });
             basket.BasketItems.Add(new BasketItem() { ProductId = "2", Quantity = 1 });
             baskets.Insert(basket);
 
